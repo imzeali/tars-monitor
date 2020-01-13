@@ -99,7 +99,7 @@ class StatFServer
         if ($rspTime >= $table->getField($key,'maxRspTime')) {
             $table->set($key, ['maxRspTime' => $rspTime]);
         }
-        if ($rspTime <= $table->getField($key,'maxRspTime')) {
+        if ($rspTime <= $table->getField($key,'minRspTime')) {
             $table->set($key, ['minRspTime' => $rspTime]);
         }
     }
