@@ -96,10 +96,10 @@ class StatFServer
         }
         $table->incrField($key, 'totalRspTime', $rspTime);
         $stat = $table->get($key);
-        if ($rspTime >= $stat['maxRspTime']) {
+        if ($rspTime >= $table->getField($key,'maxRspTime')) {
             $table->set($key, ['maxRspTime' => $rspTime]);
         }
-        if ($rspTime <= $stat['minRspTime']) {
+        if ($rspTime <= $table->getField($key,'maxRspTime')) {
             $table->set($key, ['minRspTime' => $rspTime]);
         }
     }
