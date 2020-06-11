@@ -2,7 +2,7 @@
   "name": "imzeali/tars-monitor",
   "description": "tars的主调和特性上报",
   "minimum-stability": "dev",
-  "version":"0.2.3",
+  "version":"0.2.5",
   "authors": [
     {
       "name": "Jingfeng Liu",
